@@ -30,7 +30,6 @@ to distort and split the fisheye dataset.
 The distorted fisheye images will be placed in 
 ```
 --data/distorted
---dataset/gt/train  
 ```
 and split fisheye images will be placed in
 ```
