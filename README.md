@@ -55,6 +55,10 @@ Before Start, make sure that the fisheye image have been placed in
 ```
 --sample
 ```
+run
+```
+python calib.py
+```
 After rectification, the results will be placed in
 ```
 --results
