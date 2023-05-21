@@ -3,6 +3,7 @@
 ## Introduction
 This is a TensorFlow implementation for Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification.
 This work has been published in <a href="https://ieeexplore.ieee.org/document/9980359">IEEE Access</a>.
+
 ![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig1.png)
 
 ## Installation
