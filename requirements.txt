@@ -1,0 +1,8 @@
+click==8.0.4
+Keras==2.4.3
+numpy==1.21.5
+opencv-python==4.7.0.68
+Pillow==9.3.0
+matplotlib==3.5.0
+scikit-learn==1.0.2
+tensorflow-gpu==2.4.0
