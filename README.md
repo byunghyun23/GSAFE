@@ -1,7 +1,7 @@
 # Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification
 
 ## Introduction
-This is a TensorFlow implementation for Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification.
+This is a TensorFlow implementation for Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification.  
 This work has been published in <a href="https://ieeexplore.ieee.org/document/9980359">IEEE Access</a>.
 
 ![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig1.png)
@@ -17,12 +17,12 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-For training the model, you need to download the dataset [here](https://drive.google.com/file/d/1lRsQBmwZyri6-reNWHbR9AzS3cKiiu78/view?usp=share_link) or full [Places2](http://places2.csail.mit.edu/download.html).
+For training the model, you need to download the dataset [here](https://drive.google.com/file/d/1lRsQBmwZyri6-reNWHbR9AzS3cKiiu78/view?usp=share_link) or full [Places2](http://places2.csail.mit.edu/download.html).  
 Then, move the downloaded images to
 ```
 --data/images
 ```
-run
+Run
 ```
 python data_generator.py
 python data_splitter.py
@@ -56,7 +56,7 @@ Before Start, make sure that the fisheye image have been placed in
 ```
 --sample
 ```
-run
+Run
 ```
 python calib.py
 ```
