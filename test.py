@@ -43,16 +43,17 @@ def validate(predicted, y_test):
 
 
 @click.command()
+@click.option('--model_name', default='my_model', help='Model name')
 @click.option('--test_dir', default='data/test_input/', help='Test path')
 @click.option('--target_dir', default='data/test_target/', help='Target path')
 @click.option('--predicted_dir', default='predicted/test_output/', help='Predicted path')
 @click.option('--batch_size', default=1, help='Batch size')
-def testing(test_dir, target_dir, predicted_dir, batch_size):
+def testing(model_name, test_dir, target_dir, predicted_dir, batch_size):
     leaky_relu = tf.nn.leaky_relu
 
     target_names, X_test = load_data(test_dir)
 
-    loaded_model = load_model(save_name + '.h5', custom_objects={'custom_loss': custom_loss, 'leaky_relu': leaky_relu})
+    loaded_model = load_model(model_name + '.h5', custom_objects={'custom_loss': custom_loss, 'leaky_relu': leaky_relu})
     loaded_model.summary()
 
     n = 0
