@@ -45,7 +45,7 @@ def batch_generator(X_train, Y_train):
 def training(train_dir, target_dir, batch_size, epochs):
     save_name = 'my_model'
 
-    model = model.GSAFE()  # paper
+    model = GSAFE()  # paper
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), loss=custom_loss)  # paper
 
     # plot_model(model, to_file='model.png')
