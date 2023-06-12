@@ -6,6 +6,8 @@ This work has been published in <a href="https://ieeexplore.ieee.org/document/99
 
 ![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig1.png)
 
+![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig2.png)
+
 ## Installation
 1. Clone the project
 ```
