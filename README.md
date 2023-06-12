@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-For training the model, you need to download the dataset [here](https://drive.google.com/file/d/1lRsQBmwZyri6-reNWHbR9AzS3cKiiu78/view?usp=share_link) or full [Places2](http://places2.csail.mit.edu/download.html).  
+Before training a model, you need to download the dataset [here](https://drive.google.com/file/d/1lRsQBmwZyri6-reNWHbR9AzS3cKiiu78/view?usp=share_link) or full [Places2](http://places2.csail.mit.edu/download.html).  
 Then, move the downloaded images to
 ```
 --data/images
