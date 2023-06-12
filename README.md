@@ -6,6 +6,7 @@ This work has been published in <a href="https://ieeexplore.ieee.org/document/99
 
 ![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig1.png)
 
+## Architecture
 ![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig2.png)
 
 ## Installation
@@ -42,12 +43,12 @@ and split fisheye images will be placed in
 --data/test_target
 ```
 
-## Training
+## Train
 ```
 python train.py
 ```
 
-## Testing
+## Test
 ```
 python test.py
 ```
