@@ -1,4 +1,4 @@
-# Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification
+# Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification (IEEE Access)
 
 ## Introduction
 This is a TensorFlow implementation for Global Convolutional Neural Networks With Self-Attention for Fisheye Image Rectification.  
