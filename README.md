@@ -67,3 +67,9 @@ After rectification, the results will be placed in
 ```
 --results
 ```
+Additionally, you can also use the model using Gradio.
+```
+pip install gradio
+python web.py
+```
+![image](https://github.com/byunghyun23/GSAFE/blob/main/assets/fig3.PNG)
