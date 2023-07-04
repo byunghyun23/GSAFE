@@ -3,7 +3,7 @@ from tensorflow.python.keras.models import load_model
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import tensorflow as tf
 from tensorflow_addons.optimizers import AdamW
-from util import load_data, save_images, set_gpu, custom_loss
+from util import load_data, save_images, set_gpu, custom_loss, my_custom_2
 
 
 def validate(predicted, y_test):
@@ -53,7 +53,7 @@ def testing(model_name, test_dir, target_dir, predicted_dir, batch_size):
 
     target_names, X_test = load_data(test_dir)
 
-    loaded_model = load_model(model_name + '.h5', custom_objects={'custom_loss': custom_loss, 'leaky_relu': leaky_relu})
+    loaded_model = load_model(model_name + '.h5', custom_objects={'my_custom_2': my_custom_2, 'leaky_relu': leaky_relu})
     loaded_model.summary()
 
     n = 0

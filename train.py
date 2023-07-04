@@ -8,7 +8,7 @@ from tensorflow.python.keras.models import load_model
 from model import GSAFE
 from tensorflow.python.keras.utils.vis_utils import plot_model
 from tensorflow_addons.optimizers import AdamW
-from util import load_data, set_gpu, custom_loss
+from util import load_data, set_gpu, custom_loss, my_custom_2
 
 
 def batch_generator(X_train, Y_train):
@@ -45,8 +45,8 @@ def batch_generator(X_train, Y_train):
 def training(train_dir, target_dir, batch_size, epochs):
     save_name = 'my_model'
 
-    model = GSAFE()  # paper
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), loss=custom_loss)  # paper
+    model = GSAFE()
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), loss=my_custom_2)
 
     # plot_model(model, to_file='model.png')
     model.summary()

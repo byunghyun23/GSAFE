@@ -1,8 +1,7 @@
 import click
 from tensorflow.python.keras.models import load_model
-from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 
-from util import load_data, save_images, set_gpu, custom_loss
+from util import load_data, save_images, set_gpu, my_custom_2
 
 
 @click.command()
@@ -11,9 +10,11 @@ from util import load_data, save_images, set_gpu, custom_loss
 @click.option('--results_dir', default='results/', help='Results path')
 @click.option('--batch_size', default=4, help='Batch size')
 def testing(my_model, sample_dir, results_dir, batch_size):
-    names, images = load_data(sample_dir)
 
-    loaded_model = load_model(my_model, custom_objects={'custom_loss': custom_loss})
+    names, images = load_data(sample_dir)
+    print('images.shape', images.shape)
+
+    loaded_model = load_model(my_model, custom_objects={'my_custom_2': my_custom_2})
     predicted = loaded_model.predict(images, batch_size=batch_size, verbose=1)
 
     save_images([name + '.jpg' for name in names], predicted, results_dir)

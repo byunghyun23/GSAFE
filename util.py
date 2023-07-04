@@ -1,18 +1,18 @@
-import math
 import os
-import sys
 
 import numpy as np
 import cv2
 import tensorflow as tf
-import PIL.Image as pilimg
 from tensorflow.python.framework.type_spec import ops
 from tensorflow.python.ops import math_ops
 import tensorflow.keras.backend as K
-import matplotlib.pyplot as plt
-from tensorflow.python.keras import applications
-from tensorflow.keras import losses
-from tensorflow.python.ops.variable_scope import get_variable
+
+
+def my_custom_2(y_true, y_pred):
+    y_pred = ops.convert_to_tensor_v2_with_dispatch(y_pred)
+    y_true = math_ops.cast(y_true, y_pred.dtype)
+    # return tf.keras.backend.mean(tf.norm(y_true - y_pred, axis=1)) + 1.-tf.keras.backend.mean((tf.image.ssim_multiscale(y_true, y_pred, 1.0)))
+    return tf.keras.backend.mean(tf.norm(y_true - y_pred, axis=1)) + 1.-tf.reduce_mean(tf.image.ssim(y_true, y_pred, 1.0))
 
 
 def l1_norm(y_true, y_pred):
